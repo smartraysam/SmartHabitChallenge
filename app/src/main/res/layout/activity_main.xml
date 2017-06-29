@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.smart.habitchallenge.MainActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/mainLayout">
+
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/textViewHeader"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="40sp" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/textViewHeader"
+        android:layout_centerHorizontal="true"
+        android:columnCount="4"
+        android:rowCount="1"
+        android:rowOrderPreserved="true">
+
+        <EditText
+            android:id="@+id/habitText"
+            android:layout_width="238dp"
+            android:layout_height="52dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:contentDescription="@string/habitText"
+            android:gravity="center"
+            android:layout_columnSpan="2"
+            android:editable="true"
+            android:cursorVisible="true"
+            android:onClick="onClick"
+            android:pointerIcon="none"
+            android:hint="@string/habitText"
+            android:singleLine="true" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textViewWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:text="@string/textViewWork"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#0e0101"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textViewWork"
+        android:layout_toStartOf="@+id/textViewHeader"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_habit"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:background="#ffffff"
+            android:contentDescription="@string/list_habit"
+            android:textAlignment="inherit" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/textView_com"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/textView_com"
+        android:text="@string/textView_com"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#0a1762"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_below="@+id/textView_com"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_complete"
+            android:layout_width="match_parent"
+            android:layout_height="154dp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/insertButton"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_column="3"
+        android:layout_gravity="left"
+        android:layout_row="0"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/InsertHabitButton"
+        android:src="@drawable/ok"
+        android:layout_alignTop="@+id/gridLayout"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_marginRight="1dp" />
+
+    <ImageButton
+        android:id="@+id/editHabitButton"
+        android:layout_width="62dp"
+        android:layout_height="52dp"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/editHabitButton"
+        android:src="@android:drawable/ic_menu_edit"
+        android:layout_alignTop="@+id/gridLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

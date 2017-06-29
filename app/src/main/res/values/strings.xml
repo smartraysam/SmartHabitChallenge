@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HabitChallenge</string>
+    <string name="imageSplash">HabitChallenge</string>
+    <string name="habitText">Create new habit</string>
+    <string name="textViewWork">Work in Progress</string>
+    <string name="textViewHeader">Habit</string>
+    <string name="editHabitButton">editHabit</string>
+    <string name="InsertHabitButton">InsertHabit</string>
+    <string name="action_settings">Settings</string>
+    <string name="list_habit">habitList</string>
+    <string name="textView_com">Completed Task</string>
+    <string name="habit_name">habit name goes</string>
+    <string name="Back">Back</string>
+    <string name="logo">logo</string>
+    <string name="image_logo">image_logo</string>
+    <string name="one1">1</string>
+    <string name="new_radiobutton">New RadioButton</string>
+
+</resources>
